@@ -1,0 +1,54 @@
+version: '3.4'
+networks:
+  backend:
+services:
+  stock_movement_api:
+    image: ${DOCKER_REGISTRY-}stockmovementapi
+    build:
+      context: .
+      dockerfile: Stock_Movement_Api/Dockerfile
+    ports:
+      - "8088:80"
+    depends_on:
+      - sqlserver
+    networks:
+     - backend
+
+
+  stock_api:
+    image: ${DOCKER_REGISTRY-}stockapi
+    build:
+      context: .
+      dockerfile: Stock_Api/Dockerfile
+    ports:
+      - "8089:80"
+    depends_on:
+      - sqlserver
+    networks:
+     - backend
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver
+    environment:
+     - SA_PASSWORD=Numsey#2022
+     - ACCEPT_EULA=Y
+    volumes:
+     - C:\Dados\volumes\mssql:/var/opt/mssql/data
+    ports:
+     - "1433:1433"
+    networks:
+     - backend
+
+  rabbitmq2:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq2'
+    ports:
+        - 5672:5672
+        - 15672:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+        - backend
+

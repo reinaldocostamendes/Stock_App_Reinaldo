@@ -1,0 +1,17 @@
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\bin\Debug\net5.0\StockMovement_Application.deps.json
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\bin\Debug\net5.0\StockMovement_Application.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\bin\Debug\net5.0\StockMovement_Application.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\bin\Debug\net5.0\StockMovementData.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\bin\Debug\net5.0\StockMovement_Domain.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\bin\Debug\net5.0\StockMovementData.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\bin\Debug\net5.0\StockMovement_Domain.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\StockMovement_Application.csproj.AssemblyReference.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\StockMovement_Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\StockMovement_Application.AssemblyInfoInputs.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\StockMovement_Application.AssemblyInfo.cs
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\StockMovement_Application.csproj.CoreCompileInputs.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\StockMovement_Application.csproj.CopyComplete
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\StockMovement_Application.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\refint\StockMovement_Application.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\StockMovement_Application.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Application\obj\Debug\net5.0\ref\StockMovement_Application.dll

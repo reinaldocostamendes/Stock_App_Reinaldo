@@ -1,0 +1,126 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Infrastructure/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Infrastructure.dll": {}
+        }
+      },
+      "Stock_Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Stock_Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Stock_Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Infrastructure/1.0.0": {
+      "sha512": "1TRHgIxHu/AiJOGrVM5YdYDZ5nUXqPyFuhz/85hZkQy+d6saE3h5KDCqByNcTPCfwT8cKMhTAMSpCL3HvnEElA==",
+      "type": "package",
+      "path": "infrastructure/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "infrastructure.1.0.0.nupkg.sha512",
+        "infrastructure.nuspec",
+        "lib/net5.0/Infrastructure.dll"
+      ]
+    },
+    "Stock_Domain/1.0.0": {
+      "type": "project",
+      "path": "../Stock_Data/Stock_Domain.csproj",
+      "msbuildProject": "../Stock_Data/Stock_Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Infrastructure >= 1.0.0",
+      "Stock_Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\rcm_r\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Data\\StockMovement_Data.csproj",
+      "projectName": "StockMovement_Data",
+      "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Data\\StockMovement_Data.csproj",
+      "packagesPath": "C:\\Users\\rcm_r\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Data\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\rcm_r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\rcm_r\\source\\repos\\FinancialAPP\\Infrastructure": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\Stock_Data\\Stock_Domain.csproj": {
+              "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\Stock_Data\\Stock_Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "Infrastructure": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

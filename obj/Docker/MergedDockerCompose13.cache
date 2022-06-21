@@ -1,0 +1,201 @@
+name: dockercompose3359187964964424210
+services:
+  rabbitmq2:
+    container_name: rabbitmq2
+    image: rabbitmq:3-management-alpine
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 5672
+      published: "5672"
+      protocol: tcp
+    - mode: ingress
+      target: 15672
+      published: "15672"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\rcm_r\.docker-conf\rabbitmq\data
+      target: /var/lib/rabbitmq
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\.docker-conf\rabbitmq\log
+      target: /var/log/rabbitmq
+      bind:
+        create_host_path: true
+  sqlserver:
+    container_name: sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Numsey#2022
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1433"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Dados\volumes\mssql
+      target: /var/opt/mssql/data
+      bind:
+        create_host_path: true
+  stock_api:
+    build:
+      context: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo
+      dockerfile: Stock_Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Stock_Api
+      target: base
+    container_name: Stock_Api
+    depends_on:
+      sqlserver:
+        condition: service_started
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: stockapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/Stock_Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "8089"
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Api
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  stock_movement_api:
+    build:
+      context: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo
+      dockerfile: Stock_Movement_Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Stock_Movement_Api
+      target: base
+    container_name: Stock_Movement_Api_1
+    depends_on:
+      sqlserver:
+        condition: service_started
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: stockmovementapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/Stock_Movement_Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "8088"
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Movement_Api
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  backend:
+    name: dockercompose3359187964964424210_backend

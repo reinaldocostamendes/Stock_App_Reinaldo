@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RyLq/qx+wUBesYuRajr/lx0J8xnnJI9i/UEGwOoH4AJfzjxdv90aiXtOWiDUl0baqJAy8H/F4CaDM2YSRzYNuA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\Stock_Data\\Stock_Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rcm_r\\.nuget\\packages\\infrastructure\\1.0.0\\infrastructure.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

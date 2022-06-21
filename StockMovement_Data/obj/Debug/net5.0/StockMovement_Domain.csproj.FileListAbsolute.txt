@@ -1,0 +1,12 @@
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\bin\Debug\net5.0\StockMovement_Domain.deps.json
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\bin\Debug\net5.0\StockMovement_Domain.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\bin\Debug\net5.0\StockMovement_Domain.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\StockMovement_Domain.csproj.AssemblyReference.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\StockMovement_Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\StockMovement_Domain.AssemblyInfoInputs.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\StockMovement_Domain.AssemblyInfo.cs
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\StockMovement_Domain.csproj.CoreCompileInputs.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\StockMovement_Domain.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\refint\StockMovement_Domain.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\StockMovement_Domain.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovement_Data\obj\Debug\net5.0\ref\StockMovement_Domain.dll

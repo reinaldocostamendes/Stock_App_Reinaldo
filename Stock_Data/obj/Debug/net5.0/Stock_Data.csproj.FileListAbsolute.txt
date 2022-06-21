@@ -1,0 +1,15 @@
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\Stock_Data.csproj.AssemblyReference.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\Stock_Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\Stock_Data.AssemblyInfoInputs.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\Stock_Data.AssemblyInfo.cs
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\Stock_Data.csproj.CoreCompileInputs.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\bin\Debug\net5.0\Stock_Data.deps.json
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\bin\Debug\net5.0\Stock_Data.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\bin\Debug\net5.0\Stock_Data.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\bin\Debug\net5.0\StockDomain.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\bin\Debug\net5.0\StockDomain.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\Stock_Data.csproj.CopyComplete
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\Stock_Data.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\refint\Stock_Data.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\Stock_Data.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Stock_Data\obj\Debug\net5.0\ref\Stock_Data.dll
