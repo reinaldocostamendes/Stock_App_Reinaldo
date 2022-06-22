@@ -46,3 +46,5 @@ C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\bin\Debug\StockRabbitMQPublisher.
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\bin\Debug\ConsumerRabbitMQStock.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\bin\Debug\ConsumerRabbitMQStock.pdb
