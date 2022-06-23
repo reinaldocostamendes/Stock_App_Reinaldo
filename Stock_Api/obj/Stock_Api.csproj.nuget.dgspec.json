@@ -4,14 +4,14 @@
     "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\Stock_Api\\Stock_Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\ConsumerRabbitMQStock\\ConsumerRabbitMQStock.csproj": {
+    "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\ConsumerRabbitMQStock\\ConsumerRabbitMQStock.csproj",
-        "projectName": "ConsumerRabbitMQStock",
-        "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\ConsumerRabbitMQStock\\ConsumerRabbitMQStock.csproj",
+        "projectUniqueName": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj",
+        "projectName": "RabbitMessageConsume",
+        "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj",
         "packagesPath": "C:\\Users\\rcm_r\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\ConsumerRabbitMQStock\\obj\\",
+        "outputPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,6 +56,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.17, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.14.0, )"
             },
             "RabbitMQ.Client": {
               "target": "Package",
@@ -519,8 +523,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\ConsumerRabbitMQStock\\ConsumerRabbitMQStock.csproj": {
-                "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\ConsumerRabbitMQStock\\ConsumerRabbitMQStock.csproj"
+              "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj": {
+                "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj"
+              },
+              "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovementData\\StockMovementData.csproj": {
+                "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovementData\\StockMovementData.csproj"
+              },
+              "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Application\\StockMovement_Application.csproj": {
+                "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Application\\StockMovement_Application.csproj"
               },
               "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Data\\StockMovement_Domain.csproj": {
                 "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Data\\StockMovement_Domain.csproj"

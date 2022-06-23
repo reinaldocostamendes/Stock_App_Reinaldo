@@ -2,6 +2,15 @@ version: '3.4'
 networks:
   backend:
 services:
+
+  consumer:
+    image: ${DOCKER_REGISTRY-}consumer
+    build:
+      context: .
+      dockerfile: Consumer/Dockerfile
+    networks:
+     - backend
+
   stock_movement_api:
     image: ${DOCKER_REGISTRY-}stockmovementapi
     build:
@@ -51,4 +60,5 @@ services:
         - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
     networks:
         - backend
+
 

@@ -47,7 +47,10 @@ namespace ConsumerRabbitMQStock
 
             while (true)
             {
+                channel.ExchangeDeclare(exchange: "stocks", type: "stocks");
                 channel.QueueDeclare("stocks", exclusive: false);
+                channel.QueueBind(queue: "stocks",
+             exchange: "stocks", routingKey: "anonymous.info");
                 var consumer = new EventingBasicConsumer(channel);
                 consumer.Received += async (model, eventArgs) =>
                 {

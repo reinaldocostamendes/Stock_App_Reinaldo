@@ -1655,22 +1655,23 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "ConsumerRabbitMQStock/1.0.0": {
+      "RabbitMessageConsume/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "AutoMapper": "11.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
           "RabbitMQ.Client": "6.4.0",
           "StockMovement_Application": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "System.Configuration.ConfigurationManager": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/ConsumerRabbitMQStock.dll": {}
+          "bin/placeholder/RabbitMessageConsume.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ConsumerRabbitMQStock.dll": {}
+          "bin/placeholder/RabbitMessageConsume.dll": {}
         }
       },
       "StockMovementData/1.0.0": {
@@ -6203,10 +6204,10 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "ConsumerRabbitMQStock/1.0.0": {
+    "RabbitMessageConsume/1.0.0": {
       "type": "project",
-      "path": "../ConsumerRabbitMQStock/ConsumerRabbitMQStock.csproj",
-      "msbuildProject": "../ConsumerRabbitMQStock/ConsumerRabbitMQStock.csproj"
+      "path": "../RabbitMessageConsume/RabbitMessageConsume.csproj",
+      "msbuildProject": "../RabbitMessageConsume/RabbitMessageConsume.csproj"
     },
     "StockMovementData/1.0.0": {
       "type": "project",
@@ -6237,13 +6238,15 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper >= 11.0.1",
-      "ConsumerRabbitMQStock >= 1.0.0",
       "FluentValidation.DependencyInjectionExtensions >= 11.0.3",
       "MediatR >= 10.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.14.0",
       "RabbitMQ.Client >= 6.4.0",
+      "RabbitMessageConsume >= 1.0.0",
+      "StockMovementData >= 1.0.0",
+      "StockMovement_Application >= 1.0.0",
       "StockMovement_Domain >= 1.0.0",
       "StockRabbitMQPublisher >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
@@ -6282,8 +6285,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\ConsumerRabbitMQStock\\ConsumerRabbitMQStock.csproj": {
-              "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\ConsumerRabbitMQStock\\ConsumerRabbitMQStock.csproj"
+            "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj": {
+              "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj"
+            },
+            "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovementData\\StockMovementData.csproj": {
+              "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovementData\\StockMovementData.csproj"
+            },
+            "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Application\\StockMovement_Application.csproj": {
+              "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Application\\StockMovement_Application.csproj"
             },
             "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Data\\StockMovement_Domain.csproj": {
               "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Data\\StockMovement_Domain.csproj"

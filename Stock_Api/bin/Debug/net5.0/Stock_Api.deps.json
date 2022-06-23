@@ -34,13 +34,15 @@
       "Stock_Api/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
-          "ConsumerRabbitMQStock": "1.0.0",
           "FluentValidation.DependencyInjectionExtensions": "11.0.3",
           "MediatR": "10.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
           "RabbitMQ.Client": "6.4.0",
+          "RabbitMessageConsume": "1.0.0",
+          "StockMovementData": "1.0.0",
+          "StockMovement_Application": "1.0.0",
           "StockMovement_Domain": "1.0.0",
           "StockRabbitMQPublisher": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
@@ -1490,20 +1492,21 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "ConsumerRabbitMQStock/1.0.0": {
+      "RabbitMessageConsume/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
           "RabbitMQ.Client": "6.4.0",
           "StockMovement_Application": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "System.Configuration.ConfigurationManager": "5.0.0"
         },
         "runtime": {
-          "ConsumerRabbitMQStock.dll": {}
+          "RabbitMessageConsume.dll": {}
         },
         "compile": {
-          "ConsumerRabbitMQStock.dll": {}
+          "RabbitMessageConsume.dll": {}
         }
       },
       "StockMovementData/1.0.0": {
@@ -4058,7 +4061,7 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "ConsumerRabbitMQStock/1.0.0": {
+    "RabbitMessageConsume/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

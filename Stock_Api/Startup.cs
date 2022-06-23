@@ -1,5 +1,4 @@
 using AutoMapper;
-using ConsumerRabbitMQStock;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,12 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RabbitMessageConsume;
 using StockMovement_Application.Common.AutoMapper;
-using StockMovement_Application.Service;
-using StockMovement_Application.Service.Interface;
 using StockMovementData.Context;
-using StockMovementData.Repository;
-using StockMovementData.Repository.Interface;
 using StockRabbitMQPublisher.StockPublisher;
 using System;
 using System.Collections.Generic;
@@ -44,11 +40,17 @@ namespace Stock_Api
             });
             services.AddDbContext<StockMovementContext>(options =>
           options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddStockPublisherConfiguration(Configuration);
+
+            services.AddHostedService<ConsumerMQ>();
+            // services.AddSingleton<IHostedService, ConsumerMQ>();
+            services.AddSignalR();
+            services.AddMediatR();
 
             // services.AddScoped<IStockMevementService, StockMevementService>();
             //  services.AddScoped<IStockMovementRepository, StockMovementRepsoitory>();
-            services.AddMediatR();
+            // services.AddMediatR(typeof(Startup));
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
@@ -56,7 +58,7 @@ namespace Stock_Api
 
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddHostedService<ConsumerMessageRabbitMQStock>();
+            //  services.AddHostedService<ConsumerMessageRabbitMQStock>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

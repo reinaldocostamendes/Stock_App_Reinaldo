@@ -23,7 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsumerRabbitMQStock\ConsumerRabbitMQStock.csproj" />
+    <ProjectReference Include="..\RabbitMessageConsume\RabbitMessageConsume.csproj" />
+    <ProjectReference Include="..\StockMovementData\StockMovementData.csproj" />
+    <ProjectReference Include="..\StockMovement_Application\StockMovement_Application.csproj" />
     <ProjectReference Include="..\StockMovement_Data\StockMovement_Domain.csproj" />
     <ProjectReference Include="..\StockRabbitMQPublisher\StockRabbitMQPublisher.csproj" />
   </ItemGroup>

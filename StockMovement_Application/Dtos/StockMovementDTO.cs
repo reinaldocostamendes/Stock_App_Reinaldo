@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace StockMovement_Application.Dtos
 {
-    public class StockMovementDTO : IMap<StockMovement>
+    public class StockMovementDTO/* : IMap<StockMovement>*/
     {
         public Guid OriginId { get; set; }
         public StockOrigin Origin { get; set; }
@@ -20,10 +20,10 @@ namespace StockMovement_Application.Dtos
         public DateTime Date { get; set; }
 
         public List<StockMovementProduct> Products { get; set; }
-
+        /*
         public void Mapping(Profile profile)
         {
             profile.CreateMap<StockMovementDTO, StockMovement>().ReverseMap();
-        }
+        }*/
     }
 }

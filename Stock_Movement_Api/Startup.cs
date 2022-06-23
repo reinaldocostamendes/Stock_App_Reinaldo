@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using RabbitMessageConsume;
 using StockMovement_Application.Common.AutoMapper;
 using StockMovement_Application.Service;
 using StockMovement_Application.Service.Interface;
@@ -44,10 +45,11 @@ namespace Stock_Movement_Api
             services.AddDbContext<StockMovementContext>(options =>
          options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddStockPublisherConfiguration(Configuration);
+            services.AddMediatR();
 
             services.AddScoped<IStockMevementService, StockMevementService>();
             services.AddScoped<IStockMovementRepository, StockMovementRepsoitory>();
-            services.AddMediatR();
+            //services.AddMediatR(typeof(Startup));
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());

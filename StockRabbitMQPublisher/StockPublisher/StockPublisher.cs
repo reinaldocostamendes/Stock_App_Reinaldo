@@ -19,13 +19,14 @@ namespace StockRabbitMQPublisher.StockPublisher
 
             var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
-
-            channel.QueueDeclare("stocks", exclusive: false);
+            // channel.ExchangeDeclare(exchange: "stocks_movements", type: "topic");
+            channel.QueueDeclare("stocks_movements", exclusive: false);
+            //  channel.QueueBind(queue: "stocks_movements", exchange: "stocks_movements", routingKey: "stocks_movements");
 
             var json = JsonConvert.SerializeObject(message);
             var body = Encoding.UTF8.GetBytes(json);
 
-            channel.BasicPublish(exchange: "", routingKey: "stocks", body: body);
+            channel.BasicPublish(exchange: "", routingKey: "stocks_movements", body: body);
         }
     }
 }

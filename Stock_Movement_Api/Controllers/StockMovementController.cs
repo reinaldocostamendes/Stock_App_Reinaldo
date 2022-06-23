@@ -56,7 +56,14 @@ namespace Stock_Movement_Api.Controllers
                 Date = stockMovementDTO.Date,
                 Products = stockMovementDTO.Products
             };
-            _rabbitMQPublisher.SendMessage(command);
+            try
+            {
+                _rabbitMQPublisher.SendMessage(command);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
             return Ok(true);
         }
 
