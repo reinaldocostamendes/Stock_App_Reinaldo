@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "O5VL4gtejeE9ZGxfaYdoH6LKRP8Dzx/E3HNuY56KD5qs+qCyvQJykeoENn+iYxoMqRghANdKqgk0juESdbDiyg==",
+  "dgSpecHash": "WnV7+e9keoRmMt70zSb3Ojy0Sdsg8Cdp8hW3GqrSYY46mqtJASX9fHkYxDI5NtlJ2tMemEJN1b0bhGR8o8zTQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Application\\StockMovement_Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rcm_r\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\5.0.1\\automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\rcm_r\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\fluentvalidation\\11.0.3\\fluentvalidation.11.0.3.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.3\\fluentvalidation.dependencyinjectionextensions.11.0.3.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\infrastructure\\1.0.2\\infrastructure.1.0.2.nupkg.sha512",

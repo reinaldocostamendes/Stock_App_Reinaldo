@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8uqUglo2PRrjl2b6+UhE6CEFwqjiqDTSz/N2HJjjvk7iefxsbe++qdqmEI3VVn1gmlmnxhB3ITugA68aR4xnNg==",
+  "dgSpecHash": "lt8XUbkJH2S4nAkV6Za0qCPl4ujLV2ziSn9EjDUxMCxa5aE0ojtpv3bMq5YTNG/yj2qn/npvNzQGjoqlCW2DTQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rcm_r\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\5.0.1\\automapper.extensions.microsoft.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\rcm_r\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\fluentvalidation\\11.0.3\\fluentvalidation.11.0.3.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.3\\fluentvalidation.dependencyinjectionextensions.11.0.3.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\infrastructure\\1.0.2\\infrastructure.1.0.2.nupkg.sha512",

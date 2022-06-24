@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qO3e3K3ZHpqO121pbAyS05nYR9mL94oTw+EFl8dOF4tnFvx0Te75eAhlfaUtivZNTzymh0OjYZKJKTmAThf7qQ==",
+  "dgSpecHash": "Fz0tXKFqLtX4sy4zyJZwi7py7zXNNba+h0tt6V0CaJAhtW4fZMqD0s+J0zD72Fg9oCvzJ8z+cKpAn7hm3puUvQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\Stock_Movement_Api\\Stock_Movement_Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rcm_r\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\rcm_r\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\fluentvalidation\\11.0.3\\fluentvalidation.11.0.3.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.1\\fluentvalidation.aspnetcore.11.0.1.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.0.3\\fluentvalidation.dependencyinjectionextensions.11.0.3.nupkg.sha512",
