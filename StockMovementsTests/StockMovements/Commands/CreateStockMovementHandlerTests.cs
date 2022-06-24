@@ -60,7 +60,7 @@ namespace StockMovementsTests.StockMovements.Commands
                 PageIndex = 1,
                 PageSize = 5
             });
-            result.ShouldBe
+
             result.ShouldBeOfType<StockMovementDTO>();
         }
     }
