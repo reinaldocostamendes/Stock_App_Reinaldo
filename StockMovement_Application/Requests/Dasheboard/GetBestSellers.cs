@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Infrastructure.Entity;
+using MediatR;
 using StockMovement_Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -10,5 +11,6 @@ namespace Stock_Application.Requests.Dasheboard
 {
     public class GetBestSellers : IRequest<IEnumerable<StockMovementProduct>>
     {
+        public PageParameters PageParameters { get; set; }
     }
 }

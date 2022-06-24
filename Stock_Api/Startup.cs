@@ -2,22 +2,14 @@ using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using RabbitMessageConsume;
 using StockMovement_Application.Common.AutoMapper;
 using StockMovementData.Context;
 using StockRabbitMQPublisher.StockPublisher;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Stock_Api
 {
@@ -44,13 +36,9 @@ namespace Stock_Api
             services.AddStockPublisherConfiguration(Configuration);
 
             services.AddHostedService<ConsumerMQ>();
-            // services.AddSingleton<IHostedService, ConsumerMQ>();
             services.AddSignalR();
             services.AddMediatR();
 
-            // services.AddScoped<IStockMevementService, StockMevementService>();
-            //  services.AddScoped<IStockMovementRepository, StockMovementRepsoitory>();
-            // services.AddMediatR(typeof(Startup));
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
@@ -58,7 +46,6 @@ namespace Stock_Api
 
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
-            //  services.AddHostedService<ConsumerMessageRabbitMQStock>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

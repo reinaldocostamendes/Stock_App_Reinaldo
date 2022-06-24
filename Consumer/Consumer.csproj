@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RabbitMessageConsume\RabbitMessageConsume.csproj" />
     <ProjectReference Include="..\StockMovement_Application\StockMovement_Application.csproj" />
   </ItemGroup>
 

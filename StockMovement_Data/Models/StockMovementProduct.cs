@@ -1,5 +1,7 @@
-﻿using StockMovement_Data.Models;
+﻿using Newtonsoft.Json;
+using StockMovement_Data.Models;
 using StockMovement_Domain.Enums;
+using StockMovement_Domain.Validations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,11 +23,18 @@ namespace StockMovement_Domain.Models
         public Guid StockMovementId { get; set; }
 
         public string StorageDescription { get; set; }
+
+        [JsonIgnore]
         public virtual StockMovement StockMovement { get; set; }
 
         public override bool IsValid()
         {
-            throw new NotImplementedException();
+            if (ValidationResult == null)
+            {
+                var validator = new StockMovementProductValidation();
+                ValidationResult = validator.Validate(this);
+            }
+            return ValidationResult?.IsValid != false;
         }
     }
 }

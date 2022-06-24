@@ -20,7 +20,7 @@ namespace Stock_Movement_Api
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<StartUp>();
                 });
     }
 }

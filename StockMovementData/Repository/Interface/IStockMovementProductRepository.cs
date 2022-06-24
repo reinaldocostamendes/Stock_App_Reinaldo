@@ -1,4 +1,5 @@
-﻿using StockMovement_Domain.Models;
+﻿using Infrastructure.Entity;
+using StockMovement_Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace StockMovementData.Repository.Interface
 
         public Task<List<StockMovementProduct>> GetAllProducts(Infrastructure.Entity.PageParameters pg);
 
-        public Task<List<StockMovementProduct>> GetBestSellers();
+        public Task<List<StockMovementProduct>> GetBestSellers(PageParameters pg);
 
         public Task<StockMovementProduct> PutAsync(StockMovementProduct product);
 

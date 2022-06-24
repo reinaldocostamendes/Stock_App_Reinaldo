@@ -71,3 +71,5 @@ C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Consumer\obj\Debug\net5.0\refint\
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Consumer\obj\Debug\net5.0\Consumer.pdb
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Consumer\obj\Debug\net5.0\Consumer.genruntimeconfig.cache
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Consumer\obj\Debug\net5.0\ref\Consumer.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Consumer\bin\Debug\net5.0\RabbitMessageConsume.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\Consumer\bin\Debug\net5.0\RabbitMessageConsume.pdb

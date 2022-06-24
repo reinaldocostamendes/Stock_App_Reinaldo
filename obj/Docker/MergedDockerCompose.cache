@@ -1,12 +1,5 @@
 name: dockercompose3359187964964424210
 services:
-  consumer:
-    build:
-      context: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo
-      dockerfile: Consumer/Dockerfile
-    image: consumer
-    networks:
-      backend: null
   rabbitmq2:
     container_name: rabbitmq2
     image: rabbitmq:3-management-alpine
@@ -51,21 +44,6 @@ services:
       target: /var/opt/mssql/data
       bind:
         create_host_path: true
-  stock_api:
-    build:
-      context: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo
-      dockerfile: Stock_Api/Dockerfile
-    depends_on:
-      sqlserver:
-        condition: service_started
-    image: stockapi
-    networks:
-      backend: null
-    ports:
-    - mode: ingress
-      target: 80
-      published: "8089"
-      protocol: tcp
   stock_movement_api:
     build:
       context: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo

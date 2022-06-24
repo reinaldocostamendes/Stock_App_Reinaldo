@@ -15,21 +15,20 @@ namespace RabbitMessageConsume
 {
     public class ConsumerMQ : IHostedService
     {
-        private readonly IMapper _mapper;
-        private readonly IRequestHandler<CreateStockMovementCommand, StockMovementDTO> _requestHandler;
-        private readonly ServiceProvider _serviceProvider;
+        private readonly IMediator _mediator;
+        private readonly IServiceProvider _serviceProvider;
 
-        public ConsumerMQ(IMapper mapper, IRequestHandler<CreateStockMovementCommand, StockMovementDTO> requestHandler,
-            ServiceProvider serviceProvider)
+        public ConsumerMQ(IServiceProvider serviceProvider)
         {
-            _mapper = mapper;
-            _requestHandler = requestHandler;
             _serviceProvider = serviceProvider;
+            var scope = _serviceProvider.CreateScope();
+            _mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            PullMessage();
+            new Thread(PullMessage).Start();
+            // PullMessage();
             return Task.CompletedTask;
         }
 
@@ -38,17 +37,15 @@ namespace RabbitMessageConsume
             throw new NotImplementedException();
         }
 
-        public Task PullMessage()
+        public void PullMessage()
         {
             var factory = new ConnectionFactory
             {
-                HostName = "rabbitmq2"
+                HostName = "localhost"
             };
             var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
-            //  channel.ExchangeDeclare(exchange: "stocks_movements", type: "topic");
             channel.QueueDeclare("stocks_movements", exclusive: false);
-            //  channel.QueueBind(queue: "stocks_movements", exchange: "stocks_movements", routingKey: "stocks_movements");
             var consumer = new EventingBasicConsumer(channel);
             while (true)
             {
@@ -59,18 +56,12 @@ namespace RabbitMessageConsume
 
                     CreateStockMovementCommand command = (CreateStockMovementCommand)Newtonsoft
                      .Json.JsonConvert.DeserializeObject<CreateStockMovementCommand>(message);
-                    //ProductDTO productDTO = (ProductDTO)Newtonsoft
-                    //.Json.JsonConvert.DeserializeObject<ProductDTO>(message);
-                    //await stockRepository.PostAsync(mapper.Map<Product>(productDTO));
-                    var scope = _serviceProvider.CreateScope();
-                    var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
-                    await mediator.Send(command);
-                    //  await _requestHandler.Handle(command, new CancellationToken());
 
-                    // await Mediator.Send(command,new CancellationToken());
+                    await _mediator.Send(command);
                 };
 
                 channel.BasicConsume(queue: "stocks_movements", autoAck: true, consumer: consumer);
+                Thread.Sleep(1000000000);
             }
         }
     }

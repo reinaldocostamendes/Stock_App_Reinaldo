@@ -11,7 +11,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using RabbitMessageConsume;
-using StockMovement_Application.Common.AutoMapper;
+using Stock_Application.Requests.Dasheboard;
+using Stock_Application.Requests.Products.GetAll;
+using StockMovement_Application.Commands.Create.StockMoviment;
+using StockMovement_Application.Mapping;
 using StockMovement_Application.Service;
 using StockMovement_Application.Service.Interface;
 using StockMovementData.Context;
@@ -21,13 +24,14 @@ using StockRabbitMQPublisher.StockPublisher;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Stock_Movement_Api
 {
-    public class Startup
+    public class StartUp
     {
-        public Startup(IConfiguration configuration)
+        public StartUp(IConfiguration configuration)
         {
             Configuration = configuration;
         }
@@ -45,11 +49,14 @@ namespace Stock_Movement_Api
             services.AddDbContext<StockMovementContext>(options =>
          options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddStockPublisherConfiguration(Configuration);
-            services.AddMediatR();
 
-            services.AddScoped<IStockMevementService, StockMevementService>();
             services.AddScoped<IStockMovementRepository, StockMovementRepsoitory>();
-            //services.AddMediatR(typeof(Startup));
+            services.AddScoped<IStockMovementProductRepository, StockMovementProductRepository>();
+            services.AddHostedService<ConsumerMQ>();
+            // services.AddMediatR(typeof(StartUp));
+            services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+            // services.AddOptions();
+
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());

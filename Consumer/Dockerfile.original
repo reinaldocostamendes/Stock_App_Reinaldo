@@ -11,7 +11,6 @@ COPY ["Consumer/Consumer.csproj", "Consumer/"]
 COPY ["StockMovement_Application/StockMovement_Application.csproj", "StockMovement_Application/"]
 COPY ["StockMovementData/StockMovementData.csproj", "StockMovementData/"]
 COPY ["StockMovement_Data/StockMovement_Domain.csproj", "StockMovement_Data/"]
-COPY ["RabbitMessageConsume/RabbitMessageConsume.csproj", "RabbitMessageConsume/"]
 RUN dotnet restore "Consumer/Consumer.csproj"
 COPY . .
 WORKDIR "/src/Consumer"

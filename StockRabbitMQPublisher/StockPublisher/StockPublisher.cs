@@ -14,7 +14,7 @@ namespace StockRabbitMQPublisher.StockPublisher
         {
             var factory = new ConnectionFactory
             {
-                HostName = "rabbitmq2"
+                HostName = "localhost"
             };
 
             var connection = factory.CreateConnection();

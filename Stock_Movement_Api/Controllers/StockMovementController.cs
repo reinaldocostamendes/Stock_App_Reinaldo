@@ -1,13 +1,16 @@
-﻿using Infrastructure.Entity;
+﻿using AutoMapper;
+using Infrastructure.Entity;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using StockMovement_Application.Commands.Create.StockMoviment;
 using StockMovement_Application.Commands.Delete.StockMovement;
 using StockMovement_Application.Dtos;
 using StockMovement_Application.Requests.GetAllStockMovement;
 using StockMovement_Application.Requests.GetStockMovementById;
 using StockMovement_Data.Models;
+using StockMovement_Domain.Models;
 using StockRabbitMQPublisher.StockPublisher;
 using System;
 using System.Collections.Generic;
@@ -21,27 +24,15 @@ namespace Stock_Movement_Api.Controllers
     public class StockMovementController : ControllerBase
     {
         private readonly IStockPublisher _rabbitMQPublisher;
+        private readonly IMediator mediator;
+        private readonly IMapper _mapper;
 
-        private readonly IRequestHandler<GetAllStockMovement,
-            IEnumerable<StockMovement>> _getallrequestHandler;
-
-        private readonly IRequestHandler<GetStockMovementById,
-            StockMovement> _getByIdrequestHandler;
-
-        private readonly IRequestHandler<DeleteStockMovementCommand,
-            bool> _deleteRequestHandler;
-
-        public StockMovementController(IStockPublisher rabbitMQPublisher,
-            IRequestHandler<GetAllStockMovement,
-                IEnumerable<StockMovement>> getallrequestHandler,
-            IRequestHandler<GetStockMovementById, StockMovement> getByIdrequestHandler,
-            IRequestHandler<DeleteStockMovementCommand,
-            bool> deleteRequestHandler)
+        public StockMovementController(IStockPublisher rabbitMQPublisher, IServiceProvider serviceProvider, IMapper mapper)
         {
+            _mapper = mapper;
             _rabbitMQPublisher = rabbitMQPublisher;
-            _getallrequestHandler = getallrequestHandler;
-            _getByIdrequestHandler = getByIdrequestHandler;
-            _deleteRequestHandler = deleteRequestHandler;
+            var scope = serviceProvider.CreateScope();
+            mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
         }
 
         [HttpPost]
@@ -54,7 +45,7 @@ namespace Stock_Movement_Api.Controllers
 
                 Type = stockMovementDTO.Type,
                 Date = stockMovementDTO.Date,
-                Products = stockMovementDTO.Products
+                Products = stockMovementDTO.Products.ConvertAll(p => _mapper.Map<StockMovementProduct>(p))
             };
             try
             {
@@ -72,7 +63,7 @@ namespace Stock_Movement_Api.Controllers
         {
             GetAllStockMovement getAllStockMovement = new GetAllStockMovement();
             getAllStockMovement.pageParameters = pageParameters;
-            return await _getallrequestHandler.Handle(getAllStockMovement, new CancellationToken());
+            return await mediator.Send(getAllStockMovement);
         }
 
         [HttpGet("StockMovementById")]
@@ -80,7 +71,7 @@ namespace Stock_Movement_Api.Controllers
         {
             GetStockMovementById getById = new GetStockMovementById();
             getById.StockMovementId = id;
-            return await _getByIdrequestHandler.Handle(getById, new CancellationToken());
+            return await mediator.Send(getById);
         }
 
         [HttpDelete]
@@ -88,7 +79,7 @@ namespace Stock_Movement_Api.Controllers
         {
             DeleteStockMovementCommand deleteCommand = new DeleteStockMovementCommand();
             deleteCommand.Id = id;
-            return await _deleteRequestHandler.Handle(deleteCommand, new CancellationToken());
+            return await mediator.Send(deleteCommand);
         }
     }
 }

@@ -18,10 +18,10 @@ namespace StockMovement_Application.Dtos
         public decimal UnitValue { get; set; }
         public Guid StorageId { get; set; }
         public string StorageDescription { get; set; }
-        /*
+
         public void Mapping(Profile profile)
         {
             profile.CreateMap<StockMovementProductDTO, StockMovementProduct>().ReverseMap();
-        }*/
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using StockMovement_Data.Enums;
 using StockMovement_Domain.Models;
+using StockMovement_Domain.Validations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,12 @@ namespace StockMovement_Data.Models
 
         public override bool IsValid()
         {
-            throw new NotImplementedException();
+            if (ValidationResult == null)
+            {
+                var validator = new StockMovementValidation();
+                ValidationResult = validator.Validate(this);
+            }
+            return ValidationResult?.IsValid != false;
         }
     }
 }

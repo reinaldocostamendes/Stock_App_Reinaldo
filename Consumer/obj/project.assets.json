@@ -1571,6 +1571,25 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "RabbitMessageConsume/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AutoMapper": "11.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.14.0",
+          "RabbitMQ.Client": "6.4.0",
+          "StockMovement_Application": "1.0.0",
+          "Swashbuckle.AspNetCore": "5.6.3",
+          "System.Configuration.ConfigurationManager": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RabbitMessageConsume.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RabbitMessageConsume.dll": {}
+        }
+      },
       "StockMovementData/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5959,6 +5978,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "RabbitMessageConsume/1.0.0": {
+      "type": "project",
+      "path": "../RabbitMessageConsume/RabbitMessageConsume.csproj",
+      "msbuildProject": "../RabbitMessageConsume/RabbitMessageConsume.csproj"
+    },
     "StockMovementData/1.0.0": {
       "type": "project",
       "path": "../StockMovementData/StockMovementData.csproj",
@@ -5986,6 +6010,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.14.0",
       "RabbitMQ.Client >= 6.4.0",
+      "RabbitMessageConsume >= 1.0.0",
       "StockMovement_Application >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "System.Configuration.ConfigurationManager >= 5.0.0"
@@ -6024,6 +6049,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj": {
+              "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\RabbitMessageConsume\\RabbitMessageConsume.csproj"
+            },
             "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Application\\StockMovement_Application.csproj": {
               "projectPath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovement_Application\\StockMovement_Application.csproj"
             }

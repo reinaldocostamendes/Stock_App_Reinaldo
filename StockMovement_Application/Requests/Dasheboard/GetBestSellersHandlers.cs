@@ -32,7 +32,7 @@ namespace Stock_Application.Requests.Dasheboard
 
         public async Task<IEnumerable<StockMovementProduct>> Handle(GetBestSellers request, CancellationToken cancellationToken)
         {
-            var products = await _stockRepository.GetBestSellers();
+            var products = await _stockRepository.GetBestSellers(request.PageParameters);
 
             return products;
         }

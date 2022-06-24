@@ -35,16 +35,37 @@ namespace StockMovement_Application.Commands.Create.StockMoviment
         {
             var stockMovement = new StockMovement()
             {
+                Id = Guid.NewGuid(),
                 OriginId = request.OriginId,
                 Origin = request.Origin,
                 Type = request.Type,
                 Date = request.Date,
                 Products = request.Products
             };
+            if (!stockMovement.IsValid())
+            {
+                var message = stockMovement.
+                    ValidationResult.Errors.
+                    ConvertAll(x => x.ErrorMessage.ToString()).ToList();
 
-            await _stockMovementRepository.PostAsync(stockMovement);
-            //   await _dataContext.SaveChangesAsync(cancellationToken);
+                throw new Exception(ErrorList(message));
+            }
+            else
+            {
+                await _stockMovementRepository.PostAsync(stockMovement);
+            }
+
             return _mapper.Map<StockMovementDTO>(stockMovement);
+        }
+
+        private String ErrorList(List<string> message)
+        {
+            var string_errors = "[ ";
+            foreach (var error in message)
+            {
+                string_errors += " - " + error.ToString();
+            }
+            return string_errors + " ]";
         }
     }
 }
