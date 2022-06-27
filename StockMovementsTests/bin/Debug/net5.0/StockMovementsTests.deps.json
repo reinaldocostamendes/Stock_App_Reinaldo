@@ -13,6 +13,7 @@
           "Bogus": "34.0.2",
           "Microsoft.NET.Test.Sdk": "16.11.0",
           "Moq": "4.18.1",
+          "Moq.AutoMock": "3.3.1-ci0247",
           "Shouldly": "4.0.3",
           "StockMovement_Application": "1.0.0",
           "coverlet.collector": "3.1.0",
@@ -821,6 +822,17 @@
           "lib/netstandard2.1/Moq.dll": {
             "assemblyVersion": "4.18.0.0",
             "fileVersion": "4.18.1.0"
+          }
+        }
+      },
+      "Moq.AutoMock/3.3.1-ci0247": {
+        "dependencies": {
+          "Moq": "4.18.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Moq.AutoMock.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
           }
         }
       },
@@ -2796,6 +2808,13 @@
       "sha512": "sha512-MmZIKNyvn8VrivSaqA8tqy5DmwUievC9zsuNTrcb00oY4IeGq6fXT5BQK329lZ05/tyi5vp30AWe9fl0d2PZQg==",
       "path": "moq/4.18.1",
       "hashPath": "moq.4.18.1.nupkg.sha512"
+    },
+    "Moq.AutoMock/3.3.1-ci0247": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ADoKrx/5L1ipzqMV74OctdcK7ZVmCf+s3WVHKhtv7K1pi1j9s0UsKv2ntmvzlTUwC91T07Y72bv0hWYMyq5+Zg==",
+      "path": "moq.automock/3.3.1-ci0247",
+      "hashPath": "moq.automock.3.3.1-ci0247.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Application.Requests.Dasheboard
 {
-    public class GetAllProductsHandler : IRequestHandler<GetBestSelers, IEnumerable<StockMovementProduct>>
+    public class GetAllProductsHandler : IRequestHandler<GetAllProducts, IEnumerable<StockMovementProduct>>
     {
         #region Injections
 
@@ -30,7 +30,7 @@ namespace Stock_Application.Requests.Dasheboard
 
         #endregion Controller
 
-        public async Task<IEnumerable<StockMovementProduct>> Handle(GetBestSelers request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<StockMovementProduct>> Handle(GetAllProducts request, CancellationToken cancellationToken)
         {
             var products = await _stockRepository.GetAllProducts(request.pageParameters);
 

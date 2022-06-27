@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Stock_Application.Requests.Dasheboard
 {
-    public class GetBestSelers : IRequest<IEnumerable<StockMovementProduct>>
+    public class GetAllProducts : IRequest<IEnumerable<StockMovementProduct>>
     {
         public Infrastructure.Entity.PageParameters pageParameters { get; set; }
     }

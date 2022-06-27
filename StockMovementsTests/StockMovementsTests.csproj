@@ -11,6 +11,7 @@
 	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
 	  <PackageReference Include="Bogus" Version="34.0.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+	  <PackageReference Include="Moq.AutoMock" Version="3.3.1-ci0247" />
     <PackageReference Include="Moq" Version="4.18.1" />
     <PackageReference Include="Shouldly" Version="4.0.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
@@ -27,7 +28,6 @@
   <ItemGroup>
     <Folder Include="StockMovementProducts\Commands\" />
     <Folder Include="StockMovementProducts\Querys\" />
-    <Folder Include="StockMovements\Querys\" />
   </ItemGroup>
 
   <ItemGroup>

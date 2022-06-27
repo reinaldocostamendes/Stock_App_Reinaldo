@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hFHkKgW6JR7jJeETVs7w9hmFxqHQLVhJWBlEKsRzRwjfNpTJV16YjJsGMasKDbziHyE9Kj8kq7Ql+jyjdJ7MUg==",
+  "dgSpecHash": "HhsAGvfydcB9zqo6MKC7uZuvujdtuoZ5sO/gZ/i3M2xVLkXTHaBkGbBT8YMSWPisQSq+JZqqdx9MQmyQ83mG2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\rcm_r\\source\\repos\\Stock_App_Reinaldo\\StockMovementsTests\\StockMovementsTests.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,7 @@
     "C:\\Users\\rcm_r\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\microsoft.windows.compatibility\\5.0.0\\microsoft.windows.compatibility.5.0.0.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\moq\\4.18.1\\moq.4.18.1.nupkg.sha512",
+    "C:\\Users\\rcm_r\\.nuget\\packages\\moq.automock\\3.3.1-ci0247\\moq.automock.3.3.1-ci0247.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\rcm_r\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",

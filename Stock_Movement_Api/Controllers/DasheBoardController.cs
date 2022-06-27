@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Stock_Application.Requests.Dasheboard;
-using Stock_Application.Requests.Products.GetAll;
 using StockMovement_Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -35,15 +34,15 @@ namespace Stock_Movement_Api.Controllers
         }
 
         [HttpGet("Product/BestSelers")]
-        public async Task<IEnumerable<StockMovementProduct>> GetBestSelers()
+        public async Task<IEnumerable<StockMovementProduct>> GetBestSelersProducts()
         {
             PageParameters pg = new PageParameters()
             {
                 PageIndex = 1,
                 PageSize = 5
             };
-            GetBestSelers getBestSelers = new GetBestSelers();
-            getBestSelers.pageParameters = pg;
+            GetBestSellers getBestSelers = new GetBestSellers();
+            getBestSelers.PageParameters = pg;
 
             return await mediator.Send(getBestSelers);
         }

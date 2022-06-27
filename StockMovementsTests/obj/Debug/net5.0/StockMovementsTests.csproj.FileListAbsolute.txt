@@ -261,3 +261,4 @@ C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovementsTests\obj\Debug\net
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovementsTests\obj\Debug\net5.0\refint\StockMovementsTests.dll
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovementsTests\obj\Debug\net5.0\StockMovementsTests.genruntimeconfig.cache
 C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovementsTests\obj\Debug\net5.0\ref\StockMovementsTests.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockMovementsTests\bin\Debug\net5.0\Moq.AutoMock.dll
