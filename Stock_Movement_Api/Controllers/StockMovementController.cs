@@ -73,7 +73,12 @@ namespace Stock_Movement_Api.Controllers
         {
             GetStockMovementById getById = new GetStockMovementById();
             getById.StockMovementId = id;
-            return await mediator.Send(getById);
+            var stockMovement = await mediator.Send(getById);
+            if (stockMovement == null)
+            {
+                return NoContent();
+            }
+            return stockMovement;
         }
 
         [HttpDelete]
