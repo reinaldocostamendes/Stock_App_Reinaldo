@@ -1,0 +1,15 @@
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\bin\Debug\net5.0\StockRabbitMQPublisher.deps.json
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\bin\Debug\net5.0\StockRabbitMQPublisher.runtimeconfig.json
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\bin\Debug\net5.0\StockRabbitMQPublisher.runtimeconfig.dev.json
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\bin\Debug\net5.0\StockRabbitMQPublisher.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\bin\Debug\net5.0\StockRabbitMQPublisher.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\StockRabbitMQPublisher.csproj.AssemblyReference.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\StockRabbitMQPublisher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\StockRabbitMQPublisher.AssemblyInfoInputs.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\StockRabbitMQPublisher.AssemblyInfo.cs
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\StockRabbitMQPublisher.csproj.CoreCompileInputs.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\StockRabbitMQPublisher.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\refint\StockRabbitMQPublisher.dll
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\StockRabbitMQPublisher.pdb
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\StockRabbitMQPublisher.genruntimeconfig.cache
+C:\Users\rcm_r\source\repos\Stock_App_Reinaldo\StockRabbitMQPublisher\obj\Debug\net5.0\ref\StockRabbitMQPublisher.dll

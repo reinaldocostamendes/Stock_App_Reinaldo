@@ -26,12 +26,14 @@ namespace Stock_Movement_Api.Controllers
         private readonly IStockPublisher _rabbitMQPublisher;
         private readonly IMediator mediator;
         private readonly IMapper _mapper;
+        private readonly IServiceProvider _serviceProvider;
 
         public StockMovementController(IStockPublisher rabbitMQPublisher, IServiceProvider serviceProvider, IMapper mapper)
         {
             _mapper = mapper;
+            _serviceProvider = serviceProvider;
+            var scope = _serviceProvider.CreateScope();
             _rabbitMQPublisher = rabbitMQPublisher;
-            var scope = serviceProvider.CreateScope();
             mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
         }
 

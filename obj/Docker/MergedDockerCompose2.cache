@@ -1,0 +1,45 @@
+name: dockercompose3359187964964424210
+services:
+  rabbitmq2:
+    container_name: rabbitmq2
+    image: rabbitmq:3-management-alpine
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 5672
+      published: "5672"
+      protocol: tcp
+    - mode: ingress
+      target: 15672
+      published: "15672"
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\rcm_r\.docker-conf\rabbitmq\data
+      target: /var/lib/rabbitmq
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\rcm_r\.docker-conf\rabbitmq\log
+      target: /var/log/rabbitmq
+      bind:
+        create_host_path: true
+  stock_movement_api:
+    build:
+      context: C:\Users\rcm_r\source\repos\Stock_App_Reinaldo
+      dockerfile: Stock_Movement_Api/Dockerfile
+    depends_on:
+      sqlserver:
+        condition: service_started
+    image: stockmovementapi
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "8088"
+      protocol: tcp
+networks:
+  backend:
+    name: dockercompose3359187964964424210_backend

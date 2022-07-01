@@ -47,21 +47,31 @@ namespace Stock_Movement_Api.Controllers
         }
 
         [HttpGet("Product/{ProductId}")]
-        public async Task<StockMovementProduct> GetByProductId(Guid ProductId)
+        public async Task<ActionResult<StockMovementProduct>> GetByProductId(Guid ProductId)
         {
             GetByProductId productById = new GetByProductId();
             productById.ProductId = ProductId;
-            return await _requestHandlerById.Handle(productById, new CancellationToken());
+            var product = await _requestHandlerById.Handle(productById, new CancellationToken());
+            if (product == null)
+            {
+                return NoContent();
+            }
+            return product;
         }
 
         [HttpGet("Product/{ProductId}/storage/{StorageId}")]
-        public async Task<StockMovementProduct> GetByProductIdAndStorageId(Guid ProductId, Guid StorageId)
+        public async Task<ActionResult<StockMovementProduct>> GetByProductIdAndStorageId(Guid ProductId, Guid StorageId)
         {
             GetByProductIdAndStorageId productByIdAndStorage = new GetByProductIdAndStorageId();
             productByIdAndStorage.ProductId = ProductId;
             productByIdAndStorage.StorageId = StorageId;
-            return await _requestHandlerByIdAndStorageId
+            var product = await _requestHandlerByIdAndStorageId
                 .Handle(productByIdAndStorage, new CancellationToken());
+            if (product == null)
+            {
+                return NoContent();
+            }
+            return product;
         }
     }
 }

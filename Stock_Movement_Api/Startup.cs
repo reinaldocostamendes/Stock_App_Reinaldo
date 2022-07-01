@@ -25,6 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Stock_Movement_Api
@@ -53,6 +54,8 @@ namespace Stock_Movement_Api
             services.AddScoped<IStockMovementRepository, StockMovementRepsoitory>();
             services.AddScoped<IStockMovementProductRepository, StockMovementProductRepository>();
             services.AddHostedService<ConsumerMQ>();
+            services.AddControllers().AddJsonOptions(x =>
+                     x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
             // services.AddMediatR(typeof(StartUp));
             services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
             // services.AddOptions();
